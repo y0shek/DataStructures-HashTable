@@ -1,0 +1,278 @@
+/*******************************************************************************
+File:             Questions.txt
+
+Author:           Joshua Kellerman, kellerma
+
+Completion Date:  Thursday, May 9, 2013
+
+Course:           CS 367, Spring 2013
+*******************************************************************************/
+Directions: answer the following five (5) questions.  Note: some of the 
+questions may require you to know how the LinkedList class is implemented; in 
+these cases, you should make a reasonable assumption and clearly indicate your
+assumptions in your answer.
+
+1) Suppose you insert an item into your hashtable and then immediately do a 
+lookup on that item.  What is the worst-case complexity of your program for 
+the lookup in this situation?  Briefly explain your answer.
+
+Answer:
+The worst-case complexity IF THE OBJECT IS ADDED TO THE FRONT OF THE BUCKET LIST would be constant O(1).
+Finding the bucket: O(1)
+Finding the item within the bucket: O(1)
+
+Where if the object is not added to the front of the bucket list, it would be O(N),
+where N is the number of objects in that particular bucket.
+Finding the bucket: O(1)
+Finding the item within the bucket: O(N)
+
+For questions 2 - 4, you should use the TestHash program as written.
+
+2) In this question you will run TestHash four times using the parameters 
+indicated below:
+	run1		sameNames.txt 0.8 10 S filename
+	run2		sameNames.txt 0.8 10 L filename
+	run3		samePhones.txt 0.8 10 S filename
+	run4 		samePhones.txt 0.8 10 L filename
+where filename can be any file you want.
+
+What is the output for each of the runs?  
+
+Answer: 
+
+-1ST RUN -
+
+STRING hashCode: 
+  Time to insert 5000 items: 19 ms
+  Time to lookup 5000 items: 68 ms
+  Time to delete 5000 items: 95 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        22527
+# of Items in Table:       5000
+Current LoadFactor:        0.22195587517201582
+Longest Chain Length:      756
+# of 0-Length Chains:      22520
+Avg (non-0) chain length:  714.2857142857143
+
+-2ND RUN-
+
+LONG hashCode: 
+  Time to insert 5000 items: 22 ms
+  Time to lookup 5000 items: 3 ms
+  Time to delete 5000 items: 4 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        22527
+# of Items in Table:       5000
+Current LoadFactor:        0.22195587517201582
+Longest Chain Length:      3
+# of 0-Length Chains:      18032
+Avg (non-0) chain length:  1.1123470522803114
+
+-3RD RUN-
+
+STRING hashCode: 
+  Time to insert 5000 items: 24 ms
+  Time to lookup 5000 items: 11 ms
+  Time to delete 5000 items: 17 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        22527
+# of Items in Table:       5000
+Current LoadFactor:        0.22195587517201582
+Longest Chain Length:      42
+# of 0-Length Chains:      21496
+Avg (non-0) chain length:  4.849660523763337
+
+-4TH RUN-
+
+LONG hashCode: 
+  Time to insert 5000 items: 17 ms
+  Time to lookup 5000 items: 14 ms
+  Time to delete 5000 items: 9 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        22527
+# of Items in Table:       5000
+Current LoadFactor:        0.22195587517201582
+Longest Chain Length:      17
+# of 0-Length Chains:      21632
+Avg (non-0) chain length:  5.58659217877095
+
+
+
+3) In this question you will again run TestHash four times, this time using the 
+parameters:
+	run5		sameNames.txt 0.8 10 C filename
+	run6		sameNames.txt 10.0 10 C filename
+	run7		sameNames.txt 0.8 100 C filename
+	run8		sameNames.txt 10.0 100 C filename
+where filename can be any file you want.
+
+What is the output for each of the runs?  
+
+Answer:
+
+-5TH RUN-
+
+STATIC hashCode: 
+  Time to insert 5000 items: 19 ms
+  Time to lookup 5000 items: 307 ms
+  Time to delete 5000 items: 441 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        22527
+# of Items in Table:       5000
+Current LoadFactor:        0.22195587517201582
+Longest Chain Length:      5000
+# of 0-Length Chains:      22526
+Avg (non-0) chain length:  5000.0
+
+-6TH RUN-
+
+STATIC hashCode: 
+  Time to insert 5000 items: 20 ms
+  Time to lookup 5000 items: 226 ms
+  Time to delete 5000 items: 367 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        1407
+# of Items in Table:       5000
+Current LoadFactor:        3.5536602700781805
+Longest Chain Length:      5000
+# of 0-Length Chains:      1406
+Avg (non-0) chain length:  5000.0
+
+-7TH RUN-
+
+STATIC hashCode: 
+  Time to insert 5000 items: 22 ms
+  Time to lookup 5000 items: 160 ms
+  Time to delete 5000 items: 256 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        12927
+# of Items in Table:       5000
+Current LoadFactor:        0.3867873443180939
+Longest Chain Length:      5000
+# of 0-Length Chains:      12926
+Avg (non-0) chain length:  5000.0
+
+-8TH RUN-
+
+STATIC hashCode: 
+  Time to insert 5000 items: 20 ms
+  Time to lookup 5000 items: 270 ms
+  Time to delete 5000 items: 412 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        1615
+# of Items in Table:       5000
+Current LoadFactor:        3.0959752321981426
+Longest Chain Length:      5000
+# of 0-Length Chains:      1614
+Avg (non-0) chain length:  5000.0
+
+
+
+4) In this question you will again run TestHash four times, this time using the 
+parameters:
+	run9		sameNames.txt 2.0 10 C filename
+	run10		sameNames.txt 2.0 10 S filename
+	run11		sameNames.txt 2.0 10 L filename
+	run12		sameNames.txt 2.0 10 B filename
+where filename can be any file you want. 
+
+What is the output for each of the runs?  
+
+Answer:
+
+-9TH RUN-
+
+STATIC hashCode: 
+  Time to insert 5000 items: 24 ms
+  Time to lookup 5000 items: 163 ms
+  Time to delete 5000 items: 285 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        5631
+# of Items in Table:       5000
+Current LoadFactor:        0.887941751021133
+Longest Chain Length:      5000
+# of 0-Length Chains:      5630
+Avg (non-0) chain length:  5000.0
+
+-10TH RUN-
+
+STRING hashCode: 
+  Time to insert 5000 items: 20 ms
+  Time to lookup 5000 items: 45 ms
+  Time to delete 5000 items: 64 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        5631
+# of Items in Table:       5000
+Current LoadFactor:        0.887941751021133
+Longest Chain Length:      756
+# of 0-Length Chains:      5624
+Avg (non-0) chain length:  714.2857142857143
+
+-11TH RUN-
+
+LONG hashCode: 
+  Time to insert 5000 items: 23 ms
+  Time to lookup 5000 items: 6 ms
+  Time to delete 5000 items: 6 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        5631
+# of Items in Table:       5000
+Current LoadFactor:        0.887941751021133
+Longest Chain Length:      6
+# of 0-Length Chains:      2351
+Avg (non-0) chain length:  1.524390243902439
+
+-12TH RUN-
+
+BOTH hashCode: 
+  Time to insert 5000 items: 22 ms
+  Time to lookup 5000 items: 6 ms
+  Time to delete 5000 items: 7 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        5631
+# of Items in Table:       5000
+Current LoadFactor:        0.887941751021133
+Longest Chain Length:      6
+# of 0-Length Chains:      2352
+Avg (non-0) chain length:  1.5248551387618177
+
+
+5) Briefly analyze your results from questions 2, 3, and 4. Consider the 
+following aspects:
+	- the type of hash function
+	- the maximum load factor
+	- the input file
+How do these aspects influence the table statistics? How do the table statistics 
+affect the performance (times)?
+
+Answer:
+
+The type of hash function that is the most efficient will depend on the type of data being hashed. For a collection with similar strings and differing phones, the Long hash algorithm is the most efficient. For a collection with similar phones but differing strings, the String hash algorithm (should be) more efficient. In my tests on the previous situation, the String and Long hashing efficiency actually came out about the same, with the Strings having more in the longest chain but less in the average. The Both hashing algorithm is good when there are similarities in either phone number or name, but not as efficient compared with hashing with a completely unique identifier.
+
+A greater load factor will keep the array from expanding until it is more filled up than a lower load factor. This can be good to make sure (if the buckets are large) that the array does not expand unnecessarily. If each hash code is very unique, however, overall hash table functions will slow down with a larger load factor as unique hash-coded items get piled on top of each other.
+
+The insert times did not vary greatly between the files on any of the tests, however the lookup and delete times did, because of having to search through the buckets. The insert function is, no matter what, O(1), where the lookup and delete may be O(N) (where N is the number of items in the bucket). Files mixed with hash functions that lead to larger buckets will suffer in efficiency on the lookup and delete methods.

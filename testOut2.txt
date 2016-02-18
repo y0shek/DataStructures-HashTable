@@ -1,0 +1,13 @@
+BOTH hashCode: 
+  Time to insert 5000 items: 21 ms
+  Time to lookup 5000 items: 8 ms
+  Time to delete 5000 items: 7 ms
+
+******** Hashtable Statistics ********
+
+Current Table Size:        5631
+# of Items in Table:       5000
+Current LoadFactor:        0.887941751021133
+Longest Chain Length:      6
+# of 0-Length Chains:      2352
+Avg (non-0) chain length:  1.5248551387618177
